@@ -33,6 +33,7 @@ public class LoginController {
         return adminService.login(
                 adminLoginParam.getUsername(),
                 adminLoginParam.getPassword(),
+                adminLoginParam.getCode(),
                 request);
     }
 

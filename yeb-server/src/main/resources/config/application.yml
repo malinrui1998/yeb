@@ -3,6 +3,14 @@ server:
   port: 8081
 
 spring:
+  devtools:
+    restart:
+      # 设置热部署生效
+      enabled: true
+      # 设置重启的目录
+      additional-paths: src/main/java
+      # WEB-INF目录下内容发生更改不重启
+      exclude: WEB-INF/*
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -47,11 +48,16 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
      *
      * @param username
      * @param password
+     * @param code
      * @param request
      * @return
      */
     @Override
-    public RespBean login(String username, String password, HttpServletRequest request) {
+    public RespBean login(String username, String password, String code, HttpServletRequest request) {
+        String captcha = (String) request.getSession().getAttribute("captcha");
+        if (StringUtils.isEmpty(code)||!captcha.equalsIgnoreCase(code)){
+            return RespBean.error("验证码输入错误，请重新输入！");
+        }
         //登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if (userDetails == null || passwordEncoder.matches(password, userDetails.getPassword())) {

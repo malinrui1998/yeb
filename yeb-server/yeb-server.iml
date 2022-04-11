@@ -36,7 +36,6 @@
     </orderEntry>
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.5.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.5.12" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.5.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.5.12" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.11" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.11" level="project" />
@@ -146,5 +145,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-websocket:2.5.12" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-websocket:5.3.18" level="project" />
     <orderEntry type="library" name="Maven: org.csource:fastdfs-client-java:1.29-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:2.5.12" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.5.12" level="project" />
   </component>
 </module>
