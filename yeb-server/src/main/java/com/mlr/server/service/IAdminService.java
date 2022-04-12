@@ -2,9 +2,12 @@ package com.mlr.server.service;
 
 import com.mlr.server.pojo.Admin;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mlr.server.pojo.Menu;
 import com.mlr.server.pojo.RespBean;
+import com.mlr.server.pojo.Role;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * <p>
@@ -31,4 +34,12 @@ public interface IAdminService extends IService<Admin> {
      * @return
      */
     Admin getAdminByUserName(String username);
+
+    /**
+     * 根据用户id查询角色列表
+     * @param adminId
+     * @return
+     */
+    List<Role> getRoles(Integer adminId);
+
 }

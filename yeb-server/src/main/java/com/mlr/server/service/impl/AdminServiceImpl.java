@@ -1,10 +1,12 @@
 package com.mlr.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.mlr.server.config.security.JwtTokenUtil;
+import com.mlr.server.config.security.component.JwtTokenUtil;
+import com.mlr.server.mapper.RoleMapper;
 import com.mlr.server.pojo.Admin;
 import com.mlr.server.mapper.AdminMapper;
 import com.mlr.server.pojo.RespBean;
+import com.mlr.server.pojo.Role;
 import com.mlr.server.service.IAdminService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,6 +21,7 @@ import org.springframework.util.StringUtils;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -42,6 +45,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private JwtTokenUtil jwtTokenUtil;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
+    @Resource
+    private RoleMapper roleMapper;
 
     /**
      * 登录之后返回token
@@ -55,7 +60,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public RespBean login(String username, String password, String code, HttpServletRequest request) {
         String captcha = (String) request.getSession().getAttribute("captcha");
-        if (StringUtils.isEmpty(code)||!captcha.equalsIgnoreCase(code)){
+        if (StringUtils.isEmpty(code) || !captcha.equalsIgnoreCase(code)) {
             return RespBean.error("验证码输入错误，请重新输入！");
         }
         //登录
@@ -91,4 +96,17 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
                 .eq("username", username)
                 .eq("enabled", true));
     }
+
+    /**
+     * 根据用户id查询角色列表
+     *
+     * @param adminId
+     * @return
+     */
+    @Override
+    public List<Role> getRoles(Integer adminId) {
+        return roleMapper.getRoles(adminId);
+    }
+
+
 }

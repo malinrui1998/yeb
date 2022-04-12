@@ -1,4 +1,4 @@
-package com.mlr.server.config.security;
+package com.mlr.server.config.security.component;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
