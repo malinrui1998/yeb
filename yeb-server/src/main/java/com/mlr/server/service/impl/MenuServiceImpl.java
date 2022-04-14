@@ -3,6 +3,7 @@ package com.mlr.server.service.impl;
 import com.mlr.server.pojo.Admin;
 import com.mlr.server.pojo.Menu;
 import com.mlr.server.mapper.MenuMapper;
+import com.mlr.server.pojo.RespBean;
 import com.mlr.server.service.IMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -58,4 +59,15 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     public List<Menu> getMenusWithRole() {
         return menuMapper.getMenusWithRole();
     }
+
+    /**
+     * 查询所有菜单
+     * @return
+     */
+    @Override
+    public List<Menu> getAllMenus() {
+        return menuMapper.getAllMenus();
+    }
+
+
 }
