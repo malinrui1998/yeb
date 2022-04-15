@@ -34,4 +34,5 @@ public interface IDepartmentService extends IService<Department> {
      * @return
      */
     RespBean deleteDepartment(Integer id);
+
 }
