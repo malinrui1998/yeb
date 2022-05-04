@@ -1,7 +1,7 @@
 package com.mlr.server.mapper;
 
-import com.mlr.server.pojo.MenuRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mlr.server.pojo.MenuRole;
 import org.apache.ibatis.annotations.Param;
 
 /**

@@ -1,9 +1,9 @@
 package com.mlr.server.service.impl;
 
-import com.mlr.server.pojo.Salary;
-import com.mlr.server.mapper.SalaryMapper;
-import com.mlr.server.service.ISalaryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mlr.server.mapper.SalaryMapper;
+import com.mlr.server.pojo.Salary;
+import com.mlr.server.service.ISalaryService;
 import org.springframework.stereotype.Service;
 
 /**

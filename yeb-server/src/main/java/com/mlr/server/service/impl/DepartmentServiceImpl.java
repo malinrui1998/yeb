@@ -1,10 +1,10 @@
 package com.mlr.server.service.impl;
 
-import com.mlr.server.pojo.Department;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mlr.server.mapper.DepartmentMapper;
+import com.mlr.server.pojo.Department;
 import com.mlr.server.pojo.RespBean;
 import com.mlr.server.service.IDepartmentService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

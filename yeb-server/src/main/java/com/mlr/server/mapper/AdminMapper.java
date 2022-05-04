@@ -1,8 +1,7 @@
 package com.mlr.server.mapper;
 
-import com.mlr.server.pojo.Admin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mlr.server.pojo.Menu;
+import com.mlr.server.pojo.Admin;
 
 import java.util.List;
 

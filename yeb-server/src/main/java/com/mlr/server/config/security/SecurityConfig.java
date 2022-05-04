@@ -106,7 +106,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 admin.setRoles(adminService.getRoles(admin.getId()));
                 return admin;
             }
-            throw new UsernameNotFoundException("用户名或密码不正确");
+//            throw new UsernameNotFoundException("用户名或密码不正确");
+            return null;
         };
     }
 

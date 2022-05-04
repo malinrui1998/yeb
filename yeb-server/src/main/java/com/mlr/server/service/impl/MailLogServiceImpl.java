@@ -1,9 +1,9 @@
 package com.mlr.server.service.impl;
 
-import com.mlr.server.pojo.MailLog;
-import com.mlr.server.mapper.MailLogMapper;
-import com.mlr.server.service.IMailLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mlr.server.mapper.MailLogMapper;
+import com.mlr.server.pojo.MailLog;
+import com.mlr.server.service.IMailLogService;
 import org.springframework.stereotype.Service;
 
 /**

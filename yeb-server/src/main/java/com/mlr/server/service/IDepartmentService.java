@@ -1,7 +1,7 @@
 package com.mlr.server.service;
 
-import com.mlr.server.pojo.Department;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mlr.server.pojo.Department;
 import com.mlr.server.pojo.RespBean;
 
 import java.util.List;

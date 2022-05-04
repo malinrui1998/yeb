@@ -2,12 +2,10 @@ package com.mlr.server.controller;
 
 
 import com.mlr.server.pojo.Menu;
-import com.mlr.server.service.IAdminService;
 import com.mlr.server.service.IMenuService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -22,7 +20,7 @@ import java.util.List;
  * @since 2022-04-11
  */
 @RestController
-@RequestMapping("/system/cfg")
+@RequestMapping("/system/config")
 public class MenuController {
 
     @Resource

@@ -1,15 +1,12 @@
 package com.mlr.server.service.impl;
 
-import com.mlr.server.pojo.Admin;
-import com.mlr.server.pojo.Menu;
-import com.mlr.server.mapper.MenuMapper;
-import com.mlr.server.pojo.RespBean;
-import com.mlr.server.service.IMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mlr.server.mapper.MenuMapper;
+import com.mlr.server.pojo.Menu;
+import com.mlr.server.service.IMenuService;
 import com.mlr.server.utils.AdminUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 

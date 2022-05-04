@@ -1,9 +1,9 @@
 package com.mlr.server.service.impl;
 
-import com.mlr.server.pojo.Joblevel;
-import com.mlr.server.mapper.JoblevelMapper;
-import com.mlr.server.service.IJoblevelService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.mlr.server.mapper.JoblevelMapper;
+import com.mlr.server.pojo.Joblevel;
+import com.mlr.server.service.IJoblevelService;
 import org.springframework.stereotype.Service;
 
 /**

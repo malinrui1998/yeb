@@ -1,8 +1,7 @@
 package com.mlr.server.mapper;
 
-import com.mlr.server.pojo.AdminRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mlr.server.pojo.RespBean;
+import com.mlr.server.pojo.AdminRole;
 import org.apache.ibatis.annotations.Param;
 
 /**
