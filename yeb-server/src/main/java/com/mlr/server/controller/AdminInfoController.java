@@ -53,15 +53,6 @@ public class AdminInfoController {
 
     }
 
-//    @ApiOperation(value = "更新用户密码1")
-//    @PutMapping("/admin/pass")
-//    public RespBean updateAdminPassword1(@RequestBody Map<String, Object> info) {
-//        String pass = (String) info.get("pass");
-//        Integer adminId = (Integer) info.get("adminId");
-//        return adminService.updateAdminPassword1(pass,adminId);
-//
-//    }
-
     @ApiOperation(value = "更新用户头像")
     @PostMapping("/admin/userface")
     public RespBean updateAdminUserFace(MultipartFile file, Integer id, Authentication authentication) {

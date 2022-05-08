@@ -181,25 +181,15 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     public RespBean updateAdminUserFace(String url, Integer id, Authentication authentication) {
         Admin admin = adminMapper.selectById(id);
         admin.setUserFace(url);
-        int i = adminMapper.updateById(admin);
-        if (i == 1) {
+        int result = adminMapper.updateById(admin);
+        if (result == 1) {
             Admin principal = (Admin) authentication.getPrincipal();
             principal.setUserFace(url);
             //更新Authentication
-            SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(admin, authentication.getCredentials(), authentication.getAuthorities()));
+            SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken
+                    (admin, null, authentication.getAuthorities()));
             return RespBean.success("更新成功", url);
         }
         return RespBean.error("更新失败");
     }
-//    @Override
-//    public RespBean updateAdminPassword1(String pass, Integer adminId) {
-//        Admin admin = adminMapper.selectById(adminId);
-//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//        admin.setPassword(encoder.encode(pass));
-//        int result = adminMapper.updateById(admin);
-//        if (result == 1) {
-//            return RespBean.success("更新成功");
-//        }
-//        return RespBean.error("更新失败");
-//    }
 }

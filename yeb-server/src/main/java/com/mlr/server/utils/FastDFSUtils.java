@@ -18,6 +18,10 @@ import java.io.InputStream;
 public class FastDFSUtils {
     private static Logger logger = LoggerFactory.getLogger(FastDFSUtils.class);
 
+    /**
+     * 初始化客户端
+     * ClientGlobal.init 读取配置文件并初始化对应的属性
+     */
     static {
         try {
             String filePath = new ClassPathResource("fdfs_client.conf").getFile().getAbsolutePath();
